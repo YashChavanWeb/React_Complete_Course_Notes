@@ -1,10 +1,15 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
 
 function App() {
   return (
     <>
       <Navbar title="yashTextUtils" about="aboutText" />
+
+      <div className="container my-5">
+        <TextForm heading="Enter the text to analyze below" />
+      </div>
     </>
   );
 }
