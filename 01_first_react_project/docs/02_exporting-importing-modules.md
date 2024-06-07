@@ -1,4 +1,3 @@
-````markdown
 # Exporting and Importing Modules
 
 ## Default Export and Import
@@ -13,6 +12,7 @@ In `yashmodule.js`:
 const a = "Default Export Example";
 export default a;
 ```
+
 ````
 
 In another file:
@@ -48,4 +48,4 @@ console.log(sarth221); // This will give an error
 
 ```
 
-```
+````
