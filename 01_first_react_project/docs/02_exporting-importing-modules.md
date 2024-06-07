@@ -13,8 +13,6 @@ const a = "Default Export Example";
 export default a;
 ```
 
-````
-
 In another file:
 
 ```javascript
@@ -48,4 +46,4 @@ console.log(sarth221); // This will give an error
 
 ```
 
-````
+```
