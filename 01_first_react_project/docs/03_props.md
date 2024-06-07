@@ -92,9 +92,4 @@ Navbar.defaultProps = {
 
 ```
 
-This ensures that the code blocks are correctly closed and the markdown renders properly.
-```
-
-```
-
 ```
