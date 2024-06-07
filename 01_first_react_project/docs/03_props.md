@@ -32,8 +32,6 @@ Greeting.defaultProps = {
 export default Greeting;
 ```
 
-````
-
 ### Usage Example
 
 In another file, you can use the `Greeting` component like this:
@@ -96,4 +94,7 @@ Navbar.defaultProps = {
 
 This ensures that the code blocks are correctly closed and the markdown renders properly.
 ```
-````
+
+```
+
+```
