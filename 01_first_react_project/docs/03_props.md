@@ -1,6 +1,3 @@
-It looks like the issue is with the usage of ``instead of the correct closing` for the code blocks. Here's the corrected version of the file:
-
-````markdown
 # Props
 
 ## Key Points
@@ -34,6 +31,7 @@ Greeting.defaultProps = {
 
 export default Greeting;
 ```
+
 ````
 
 ### Usage Example
@@ -98,3 +96,4 @@ Navbar.defaultProps = {
 
 This ensures that the code blocks are correctly closed and the markdown renders properly.
 ```
+````
