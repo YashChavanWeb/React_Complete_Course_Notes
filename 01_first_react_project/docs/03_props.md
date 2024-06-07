@@ -1,3 +1,4 @@
+````markdown
 # Props
 
 ## Key Points
@@ -31,7 +32,6 @@ Greeting.defaultProps = {
 
 export default Greeting;
 ```
-
 ````
 
 ### Usage Example
@@ -92,4 +92,7 @@ Navbar.defaultProps = {
 };
 ```
 
-````
+```
+
+
+```
