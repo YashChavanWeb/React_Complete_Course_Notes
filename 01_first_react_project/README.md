@@ -10,6 +10,7 @@ This repository contains notes and examples for various React concepts and techn
 - [Hooks and useState](./docs/04_hooks-usestate.md)
 - [Giving Styles using States](./docs/05_giving-style.md)
 - [Alert and auto Dismiss](./docs/06_alert_and_autoDismiss.md)
+- [Understanding and doing Exercise](./docs/07_exercise_of_diff_modes.md)
 
 ## Conclusion
 
