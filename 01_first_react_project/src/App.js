@@ -9,6 +9,44 @@ function App() {
 
   const [mode, setMode] = useState('light')
   const [alert, setAlert] = useState(null)
+  const [colorTheme, setColorTheme] = useState(mode)
+
+  const setWarmColor = () => {
+    document.body.style.backgroundColor = 'red';
+    document.body.style.color = 'yellow';
+
+
+
+    // if we want to style a button, then we need to get its id, we cannot style it directly like .button
+
+
+    let buttons = document.querySelectorAll('.btn');
+
+    // this approach will not work as the querySelectorAll gives a collection not a single element
+    //   button.style.backgroundColor = 'white';
+    //   button.style.color = 'black';
+
+
+    buttons.forEach(button => {
+      button.style.backgroundColor = 'yellow';
+      button.style.color = 'black';
+    });
+
+
+    setColorTheme('warm');     // this has no relation with the css, this is just that we are setting the mode of the color to warm which is nothing to do with the css
+  };
+
+  const setCoolColor = () => {
+    document.body.style.backgroundColor = 'blue';
+    document.body.style.color = 'white';
+    setColorTheme('cool');
+  };
+
+  const setHotColor = () => {
+    document.body.style.backgroundColor = 'orange';
+    document.body.style.color = 'black';
+    setColorTheme('hot');
+  };
 
   const showAlertOn = (message, type) => {
     setAlert({
@@ -23,29 +61,41 @@ function App() {
 
   const toggleMode = () => {
     if (mode === 'light') {
-      setMode('dark')
+      setMode('dark')   // this is just for verification of the mode for if condition, it has nothing to do with the actual changing of the color
 
-      // to change the overall body color
+      // actual changing of the css is done by giving style
       document.body.style.backgroundColor = 'grey'
       showAlertOn('Dark Mode Enabled', 'success')
-
     } else {
       setMode('light')
       document.body.style.backgroundColor = 'white'
       showAlertOn('Light Mode Enabled', 'success')
-
-
     }
+    setColorTheme(mode === 'light' ? 'dark' : 'light');
   }
 
   return (
     <>
-      <Navbar title="yashTextUtils" about="aboutText" mode={mode} toggleMode={toggleMode} />
+      <Navbar
+        title="yashTextUtils"
+        about="aboutText"
+        mode={mode}
+        toggleMode={toggleMode}
+        setWarmColor={setWarmColor}
+        setCoolColor={setCoolColor}
+        setHotColor={setHotColor}
+        colorTheme={colorTheme}
+      />
 
       <Alert alert={alert} />
 
       <div className="container my-5">
-        <TextForm heading="Enter the text to analyze below" mode={mode} alert={alert} showAlertOn={showAlertOn} />
+        <TextForm
+          heading="Enter the text to analyze below"
+          mode={mode}
+          alert={alert}
+          showAlertOn={showAlertOn}
+        />
         <About />
       </div>
     </>

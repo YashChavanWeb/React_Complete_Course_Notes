@@ -50,8 +50,8 @@ function TextForm(props) {
                 </div>
                 <button className="btn btn-primary mx-2" onClick={convertToUpper}>Convert To Uppercase</button>
                 <button className="btn btn-primary mx-2" onClick={convertToLower}>Convert To Lowercase</button>
-                <button className="btn btn-primary mx-2" onClick={clearTheText}>Clear text</button>
                 <button className="btn btn-primary mx-2" onClick={boldText}>Bold Text</button>
+                <button className="btn btn-primary mx-2" onClick={clearTheText}>Clear text</button>
                 <button className="btn btn-primary mx-2" onClick={changeColor}>Change Color</button>
             </div>
 
