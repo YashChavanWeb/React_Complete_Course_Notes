@@ -50,6 +50,7 @@ This course is designed to provide a thorough understanding of React.js, a power
 ## Getting Started
 
 To get started with the course:
+<<<<<<< HEAD
 
 1. Clone this repository to your local machine.
 2. Navigate to each module's directory and follow the instructions in the README files.
