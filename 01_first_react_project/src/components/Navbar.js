@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar(props) {
     return (
-        <div className='border border-5'>
+        <div style={{ border: '1px solid grey' }}>
             <nav className={`navbar navbar-expand-lg navbar-${props.colorTheme} bg-${props.colorTheme}`} style={{ color: `${props.colorTheme === 'light' ? 'black' : 'white'}` }}>
 
                 <div className="container-fluid">
@@ -48,15 +48,15 @@ function Navbar(props) {
     )
 }
 
-// adding important checks
-Navbar.propTypes = {
-    title: PropTypes.string,
-    about: PropTypes.string.isRequired  // so if we don't pass a prop it will show error
-}
+// // adding important checks
+// Navbar.propTypes = {
+//     title: PropTypes.string,
+//     about: PropTypes.string.isRequired  // so if we don't pass a prop it will show error
+// }
 
-// setting default values - if we don't pass props
-Navbar.defaultProps = {
-    about: "Default About"
-}
+// // setting default values - if we don't pass props
+// Navbar.defaultProps = {
+//     about: "Default About"
+// }
 
 export default Navbar

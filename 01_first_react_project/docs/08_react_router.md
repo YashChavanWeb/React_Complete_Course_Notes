@@ -56,6 +56,7 @@ In `Navbar.js`, we use `Link` from `react-router-dom` to enable navigation witho
    ```
 
 2. **Using Link for Navigation**
+
    ```jsx
    <div className="container-fluid">
      <Link
@@ -68,6 +69,7 @@ In `Navbar.js`, we use `Link` from `react-router-dom` to enable navigation witho
      </Link>
 
    ```
+
    - **Link Component**:
      - `to`: Specifies the URL path to navigate to when the link is clicked.
      - Provides client-side navigation, avoiding a full page reload.

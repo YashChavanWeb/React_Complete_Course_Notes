@@ -15,10 +15,9 @@ function App() {
 
   const setWarmColor = () => {
     document.body.style.backgroundColor = 'red';
-    document.body.style.color = 'yellow';
+    document.body.style.color = 'white';
 
     // if we want to style a button, then we need to get its id, we cannot style it directly like .button
-
     let buttons = document.querySelectorAll('.btn');
 
     // this approach will not work as the querySelectorAll gives a collection not a single element
@@ -41,7 +40,14 @@ function App() {
 
   const setHotColor = () => {
     document.body.style.backgroundColor = 'orange';
-    document.body.style.color = 'black';
+    document.body.style.color = 'white';
+
+    let buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.style.backgroundColor = 'red';
+      button.style.color = 'white';
+    });
+
     setColorTheme('hot');
   };
 
@@ -57,23 +63,51 @@ function App() {
   };
 
   const toggleMode = () => {
+    let buttons = document.querySelectorAll('.btn');
+    let textAreaCont = document.querySelector('.form-control');
+
     if (mode === 'light') {
-      setMode('dark'); // this is just for verification of the mode for if condition, it has nothing to do with the actual changing of the color
+      setMode('dark');
 
-      // actual changing of the css is done by giving style
-      document.body.style.backgroundColor = 'grey';
+      // Changing body background color
+      document.body.style.backgroundColor = 'black';
       showAlertOn('Dark Mode Enabled', 'success');
-
       document.title = 'TextUtils - Dark Mode';
+
+      // Changing buttons colors
+      buttons.forEach(button => {
+        button.style.backgroundColor = '#301934';
+        button.style.color = 'white';
+      });
+
+      // Changing text area colors
+      if (textAreaCont) {
+        textAreaCont.style.backgroundColor = '#36454F';
+        textAreaCont.style.color = 'white';
+      }
     } else {
       setMode('light');
+
+      // Changing body background color
       document.body.style.backgroundColor = 'white';
       showAlertOn('Light Mode Enabled', 'success');
-
       document.title = 'TextUtils - Light Mode';
+
+      // Changing buttons colors
+      buttons.forEach(button => {
+        button.style.backgroundColor = '';
+        button.style.color = '';
+      });
+
+      // Changing text area colors
+      if (textAreaCont) {
+        textAreaCont.style.backgroundColor = 'white';
+        textAreaCont.style.color = 'black';
+      }
     }
     setColorTheme(mode === 'light' ? 'dark' : 'light');
   };
+
 
   return (
     <Router>
