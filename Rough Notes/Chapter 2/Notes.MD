@@ -155,3 +155,33 @@ console.log(e.target.value)
 }
 
 <input type="text" placeholder = "enter name" onChange={handleOnChange}   /> // we just pass the reference and we automatically pass the event as well
+
+avoid inline arrow functions for jsx components
+
+Passing function via props:
+
+- parent to child communication
+
+<Item item={foodItem} handleButton={()=> console.log('clicked')}>
+<Item item={foodItem} handleButton={()=> console.log(`${foodItem} bought`)}>
+
+function Item({item, handleButton}) {
+<button onClick={handleButton}> {item} </button>
+}
+
+- parent defines a function and child invokes it
+
+Problem due to which we use states
+
+let letter = 'Entered food item'
+
+function App() {
+const handleLetter= (e)=>{
+letter = e.target.value
+}
+
+    return (
+        <p onClick={handleLetter} >{letter}</p>   // here the value will not be updated as the state is the same here
+    )
+
+}

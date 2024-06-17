@@ -177,3 +177,30 @@ function App() {
 
 export default App;
 ```
+
+## Passing Function via Props
+
+Allows parent-child communication by passing functions as props.
+
+### Usage:
+
+```jsx
+// Parent Component
+function ParentComponent() {
+  const handleButtonClick = () => {
+    console.log("Button clicked");
+  };
+
+  return <ChildComponent handleClick={handleButtonClick} />;
+}
+
+// Child Component
+function ChildComponent(props) {
+  return <button onClick={props.handleClick}>Click me</button>;
+}
+```
+
+### Key Points:
+
+- Functions passed as props can be executed in the child component.
+- Enables communication and interaction between components.
