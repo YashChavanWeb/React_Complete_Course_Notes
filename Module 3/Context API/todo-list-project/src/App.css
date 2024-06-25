@@ -1,0 +1,79 @@
+.center {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin as needed */
+  width: 530px;
+}
+
+.app-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.add-todo {
+  margin-bottom: 20px;
+  display: flex;
+  width: 500px;
+}
+
+.add-todo .input-group {
+  margin-bottom: 10px;
+}
+
+.add-todo .input-group input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.add-todo .input-group input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.add-todo .input-group button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-todo .input-group button:hover {
+  background-color: #0056b3;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-item .item-details {
+  flex-grow: 1;
+}
+
+.todo-item .item-details .todo-name {
+  font-size: 18px;
+}
+
+.todo-item .item-details .todo-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.todo-item .delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item .delete-btn:hover {
+  background-color: #c82333;
+}
